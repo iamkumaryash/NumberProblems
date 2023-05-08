@@ -7,4 +7,6 @@ public interface NumberService {
 
     boolean verifyPrimeNumber(int n);
     boolean verifyPalindromeNumber(int n);
+    boolean verifyCoPrimeNumber(int n,int n1);
+    boolean verifyTwinPrimeNumber(int n,int n1);
 }

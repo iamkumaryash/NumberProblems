@@ -24,5 +24,17 @@ public class Controller {
         Boolean isPalindrome = numberService.verifyPalindromeNumber(number);
         return number + " is palindrome " + isPalindrome;
     }
+
+    @RequestMapping(value = "/check/coprime/{number1}/{number2}", method = RequestMethod.GET)
+    public String verifyCoPrimeNumber(@PathVariable("number1") int number1,@PathVariable("number2")  int number2) {
+        Boolean isCoPrime = numberService.verifyCoPrimeNumber(number1, number2);
+        return number1 + " & " + number2 + " are Co-prime: " + isCoPrime;
+    }
+
+    @RequestMapping(value = "/check/twinPrime/{number1}/{number2}", method = RequestMethod.GET)
+    public String verifyTwinPrimeNumber(@PathVariable("number1") int number1,@PathVariable("number2") int number2){
+        Boolean isTwinPrime = numberService.verifyTwinPrimeNumber(number1, number2);
+        return number1 + " & " + number2 + " are Twin-Prime: " + isTwinPrime;
+    }
 }
 
