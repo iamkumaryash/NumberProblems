@@ -9,4 +9,6 @@ public interface NumberService {
     boolean verifyPalindromeNumber(int n);
     boolean verifyCoPrimeNumber(int n,int n1);
     boolean verifyTwinPrimeNumber(int n,int n1);
+    boolean verifyAutomorphicNumber(int n);
+
 }

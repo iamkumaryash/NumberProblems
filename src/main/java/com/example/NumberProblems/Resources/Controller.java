@@ -36,5 +36,11 @@ public class Controller {
         Boolean isTwinPrime = numberService.verifyTwinPrimeNumber(number1, number2);
         return number1 + " & " + number2 + " are Twin-Prime: " + isTwinPrime;
     }
+
+    @RequestMapping(value = "/check/automorphic/{number}", method = RequestMethod.GET)
+    public String verifyAutomorphicNumber(@PathVariable("number") int number){
+        Boolean isAutomorphic = numberService.verifyAutomorphicNumber(number);
+        return number + " is AUTOMORPHIC NUMBER " + isAutomorphic;
+    }
 }
 

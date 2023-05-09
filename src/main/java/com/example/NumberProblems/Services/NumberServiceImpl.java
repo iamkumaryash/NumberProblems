@@ -87,6 +87,21 @@ public class NumberServiceImpl implements NumberService {
             }
         }
 
+        @Override
+        public boolean verifyAutomorphicNumber(int n) {
+            int square = n * n;
+
+            while (n > 0) {
+                if (n % 10 != square % 10) {
+                    return false;
+                }
+                n /= 10;
+                square /= 10;
+            }
+
+            return true;
+        }
+
     }
 
 
